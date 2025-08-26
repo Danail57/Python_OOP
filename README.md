@@ -1,3 +1,3 @@
 # Python_OOP
 
-This repository demonstrates fundamental principles of Object-Oriented Programming (OOP) in Python.
+This repository illustrates fundamental principles of Object-Oriented Programming (OOP) in Python.
