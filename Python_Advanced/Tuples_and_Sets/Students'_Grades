@@ -1,1 +1,14 @@
+n = int(input())
+students = {}
+
+for i in range(n):
+    name, grade = input().split()
+    if name not in students:
+        students[name] = []
+    students[name].append(float(grade))   # добавяме оценката винаги
+
+for name, grades in students.items():
+    avg = sum(grades) / len(grades)
+    formatted_grades = " ".join([f"{g:.2f}" for g in grades])
+    print(f"{name} -> {formatted_grades} (avg: {avg:.2f})")
 
