@@ -1,1 +1,11 @@
+#1
+sequence_of_numbers = list(map(int, input().split( )))
+target_number = int(input())
 
+for x in range(len(sequence_of_numbers)):
+    for y in range(x + 1, len(sequence_of_numbers)):
+        if sequence_of_numbers[x] + sequence_of_numbers[y] == target_number:
+            print(f'{sequence_of_numbers[x]} + {sequence_of_numbers[y]} = {target_number}')
+
+
+#2
