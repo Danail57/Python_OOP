@@ -1,3 +1,4 @@
+#1
 n = int(input())
 parking = set()
 
@@ -13,3 +14,25 @@ if len(parking) == 0:
 else:
     for car in parking:
         print(car)
+
+
+#2
+n = int(input())
+parking = set()
+
+for _ in range(n):
+    direction, number = input().split(", ")
+    if direction == 'IN':
+        parking.add(number)
+    elif direction == 'OUT':
+        if number in parking:
+            parking.remove(number)
+
+if len(parking) == 0:
+    print('Parking Lot is Empty')
+else:
+    for car in parking:
+        print(car)
+
+Забележка - Поведението на remove също вдига грешка, ако елементът не присъства в колекцията;  
+if number in parking -> играе роля на try Except
