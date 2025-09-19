@@ -1,6 +1,5 @@
 from collections import deque
 
-
 green_light_duration = int(input())
 free_window_duration = int(input())
 crossroad = deque()
@@ -22,15 +21,15 @@ while command != 'End':
             if car_length <= time:
                 time -= car_length
                 total_cars += 1
-            
-            elif time + free_window_duration >= car_length:
+
+            if time + free_window_duration >= car_length:
                 total_cars += 1
                 time = 0
-            
+
             else:
                 hit_index = time + free_window_duration
                 if hit_index >= len(car):
-                    # hit_index = len(car) - 1
+                    hit_index = len(car) - 1
                 print("A crash happened!")
                 print(f"{car} was hit at {car[hit_index]}.")
                 crash = True
