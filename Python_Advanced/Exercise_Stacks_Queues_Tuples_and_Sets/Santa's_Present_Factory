@@ -36,13 +36,12 @@ while materials and magic:
         magic.popleft()
         materials[-1] += 15
 
-    else:  # total_magic == 0
+    else:
         if materials[-1] == 0:
             materials.pop()
         if magic and magic[0] == 0:
             magic.popleft()
 
-# success condition
 success = (
         ('Doll' in presents and 'Wooden train' in presents) or
         ('Teddy bear' in presents and 'Bicycle' in presents)
