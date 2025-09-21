@@ -2,7 +2,6 @@ def is_balanced(expression):
     stack = []
     brackets = {")": "(", "}": "{", "]": "["}
 
-
     for symbol in expression:
         if symbol in '({[':
             stack.append(symbol)
