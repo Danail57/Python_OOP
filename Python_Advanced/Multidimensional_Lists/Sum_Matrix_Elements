@@ -6,5 +6,6 @@ for _ in range(rows):
     data = [int(el) for el in input().split(", ")]
     matrix.append(data)
     total_sum += sum(data)
+
 print(total_sum)
 print(matrix)
