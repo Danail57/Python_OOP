@@ -8,7 +8,7 @@ total_cars = 0
 
 command = input().strip()
 
-while command != 'End':
+while command != 'END':
     if command != 'green':
         crossroad.append(command)
     else:
