@@ -34,5 +34,5 @@ else:
     for car in parking:
         print(car)
 
-Забележка - Поведението на remove също вдига грешка, ако елементът не присъства в колекцията;  
-if number in parking -> играе роля на try Except
+# Забележка - Поведението на remove също вдига грешка, ако елементът не присъства в колекцията;  
+# if number in parking -> играе роля на try Except
