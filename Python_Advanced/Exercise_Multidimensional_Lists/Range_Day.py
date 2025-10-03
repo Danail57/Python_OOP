@@ -39,6 +39,9 @@ for _ in range(int(input())):
             row += move[0]
             col += move[1]
 
+        if targets == 0:
+            break
+
     elif action == 'move':
         steps = int(command[2])
         row = my_position[0] + move[0] * steps
@@ -53,4 +56,3 @@ else:
     print(f"Training not completed! {targets} targets left.")
 
 [print(pos) for pos in targets_down]
-
