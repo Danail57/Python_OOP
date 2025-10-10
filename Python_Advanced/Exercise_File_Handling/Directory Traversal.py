@@ -2,7 +2,7 @@ import os
 from collections import defaultdict
 
 files = defaultdict(list)
-directory = "."  
+directory = "."
 
 for element in os.listdir(directory):
     path = os.path.join(directory, element)
@@ -22,3 +22,5 @@ with open("dir_traversal.txt", "w") as report:
         for name in sorted(filenames):
             report.write(f"- - - {name}\n")
 
+with open("dir_traversal.txt", "r") as report:
+    print(report.read())
