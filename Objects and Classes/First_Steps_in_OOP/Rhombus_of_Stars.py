@@ -1,10 +1,11 @@
 def print_top(n):
     for row in range(1, n + 1):
-        print(f"{' '*(n-row)}{'* ' * row}")
+        print(' ' * (n - row) + '* ' * row)
 
 def print_bottom(n):
-    for row in range(1, n):
-        print(f"{' '*row}{'* ' * (n-row)}")
+    for row in range(n - 1, 0, -1):
+        print(' ' * (n - row) + '* ' * row)
 
-print_top(5)
-print_bottom(5)
+n = int(input())
+print_top(n)
+print_bottom(n)
