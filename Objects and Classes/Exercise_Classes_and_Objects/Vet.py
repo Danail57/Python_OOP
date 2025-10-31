@@ -1,10 +1,11 @@
 class Vet:
     animals: list = []
+    # Тук в клас атрибута държим животните и на двамата лекари
     space = 5
 
     def __init__(self, name: str):
         self.name = name
-        self.animals = []
+        self.animals = [] # Това е списъкът  от животни, които има всеки един от лекарите
 
     def register_animal(self, animal_name: str):
         if len(Vet.animals) < self.space:
