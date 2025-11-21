@@ -1,31 +1,32 @@
 class Person:
     def __init__(self, name: str, surname: str):
-        self.surname = surname
         self.name = name
+        self.surname = surname
 
     def __repr__(self):
-        return f"({self.name} {self.surname})"
+        return f"{self.name} {self.surname}"
 
     def __add__(self, other: "Person"):
-        return Person(name=self.name, surname=other.surname)
+        return Person(self.name, other.surname)
 
 
 class Group:
     def __init__(self, name: str, people: list[Person]):
-        self.people = people
         self.name = name
+        self.people = people
 
     def __len__(self):
         return len(self.people)
 
     def __add__(self, other: "Group"):
-        return Group(name=f"{self.name} {other.name}", people=self.people + other.people)
+        return Group(f"{self.name} {other.name}", self.people + other.people)
 
     def __repr__(self):
         return f"Group {self.name} with members {', '.join(repr(p) for p in self.people)}"
 
     def __getitem__(self, index: int):
         return f"Person {index}: {self.people[index]}"
+
 
 p0 = Person('Aliko', 'Dangote')
 p1 = Person('Bill', 'Gates')
@@ -43,4 +44,3 @@ print(third_group[0])
 
 for person in third_group:
     print(person)
-
