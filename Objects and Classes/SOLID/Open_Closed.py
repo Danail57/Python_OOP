@@ -1,3 +1,4 @@
+#1
 class Shape:
     def area(self):
         raise NotImplementedError
@@ -13,3 +14,17 @@ class Square(Shape):
         self.a = a
     def area(self):
         return self.a ** 2
+
+
+
+#2
+class Bird:
+    pass
+
+class FlyingBird(Bird):
+    def fly(self):
+        print("Flying")
+
+class Penguin(Bird):
+    def swim(self):
+        print("Swimming")
