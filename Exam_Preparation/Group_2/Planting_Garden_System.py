@@ -14,8 +14,8 @@ def plant_garden(space, *allowed_plants, **requested_plants):
                     plants_planted.append((plant, planted))
                     space -= planted * s
                 break
-        if space <= 0:
-            break
+        # if space <= 0:
+          #  break
     result = []
     if all_planted:
         result.append(f"All plants were planted! Available garden space: {space:.1f} sq meters.")
