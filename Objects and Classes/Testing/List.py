@@ -45,7 +45,7 @@ class IntegerList:
         return self.get_data().index(el)
 
 
-from unittest import TestCase
+from unittest import TestCase, main
 
 
 class ListTests(TestCase):
