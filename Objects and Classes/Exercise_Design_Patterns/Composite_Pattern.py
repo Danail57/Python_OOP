@@ -9,11 +9,11 @@ class Graphic(ABC):
 
 class Circle(Graphic):
     def draw(self):
-        print("drawing circle...")
+        print("Drawing circle...")
 
 class Rectangle(Graphic):
     def draw(self):
-        print("drawing rectangle...")
+        print("Drawing rectangle...")
 
 class CompositeGraphic(Graphic):
     def __init__(self):
